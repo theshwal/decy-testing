@@ -1,0 +1,36 @@
+name: Feature idea
+description: Suggest an improvement or future feature
+title: "[Idea] "
+labels: [idea, needs-review]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      placeholder: I often need to...
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your idea
+      placeholder: DECY could...
+    validations:
+      required: true
+  - type: dropdown
+    id: importance
+    attributes:
+      label: How important is this to you?
+      options:
+        - Very important
+        - Useful but not essential
+        - Nice to have
+    validations:
+      required: true
+  - type: textarea
+    id: alternative
+    attributes:
+      label: What do you do today instead?
+      placeholder: Today I use...
+    validations:
+      required: false
