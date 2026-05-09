@@ -1,0 +1,55 @@
+name: Alpha feedback
+description: Share general feedback after testing DECY
+title: "[Feedback] "
+labels: [feedback, needs-review]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Share what felt useful, confusing, missing, or unnecessary. Please avoid personal details.
+  - type: textarea
+    id: context
+    attributes:
+      label: What were you trying to do?
+      placeholder: I was trying to decide whether to...
+    validations:
+      required: true
+  - type: textarea
+    id: useful
+    attributes:
+      label: What felt useful?
+      placeholder: The app helped me because...
+    validations:
+      required: false
+  - type: textarea
+    id: confusing
+    attributes:
+      label: What felt confusing or too heavy?
+      placeholder: I did not understand...
+    validations:
+      required: false
+  - type: textarea
+    id: missing
+    attributes:
+      label: What was missing?
+      placeholder: I expected to be able to...
+    validations:
+      required: false
+  - type: dropdown
+    id: value
+    attributes:
+      label: Would you use this again?
+      options:
+        - Yes, clearly
+        - Maybe, if improved
+        - Not sure
+        - Probably not
+    validations:
+      required: true
+  - type: input
+    id: language
+    attributes:
+      label: App language used
+      placeholder: French / English / Spanish...
+    validations:
+      required: false
