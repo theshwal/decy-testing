@@ -1,0 +1,58 @@
+name: Alpha access request
+description: Ask to join the DECY alpha test
+title: "[Alpha access] "
+labels: [alpha-access, needs-review]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Requesting access does not guarantee immediate access. Please do not share sensitive information.
+  - type: input
+    id: name
+    attributes:
+      label: Name or nickname
+      placeholder: Your name or nickname
+    validations:
+      required: true
+  - type: input
+    id: contact
+    attributes:
+      label: Contact method
+      description: Email, Reddit username, or GitHub username. Only share what you are comfortable sharing publicly.
+      placeholder: GitHub username / Reddit username / email
+    validations:
+      required: false
+  - type: dropdown
+    id: language
+    attributes:
+      label: Preferred language
+      options:
+        - French
+        - English
+        - Spanish
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: country
+    attributes:
+      label: Country or region
+      placeholder: France, UK, Spain...
+    validations:
+      required: false
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Why do you want to test DECY?
+      placeholder: I want to test it because...
+    validations:
+      required: true
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Alpha understanding
+      options:
+        - label: I understand this is an early alpha and may be incomplete or unstable.
+          required: true
+        - label: I agree not to post private documents, secrets, or sensitive personal information in public issues.
+          required: true
