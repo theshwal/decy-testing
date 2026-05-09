@@ -1,0 +1,43 @@
+name: Confusing screen or wording
+description: Tell us where the app was unclear
+title: "[Confusing] "
+labels: [confusing, needs-review]
+body:
+  - type: input
+    id: screen
+    attributes:
+      label: Which screen or feature?
+      placeholder: Home, contract detail, reminders, voice review...
+    validations:
+      required: true
+  - type: textarea
+    id: unclear
+    attributes:
+      label: What was unclear?
+      placeholder: I did not understand what this meant...
+    validations:
+      required: true
+  - type: textarea
+    id: expectation
+    attributes:
+      label: What would have made it clearer?
+      placeholder: A better wording could be...
+    validations:
+      required: false
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Did it stop you from continuing?
+      options:
+        - Yes
+        - No, but it slowed me down
+        - No, just wording
+    validations:
+      required: true
+  - type: input
+    id: language
+    attributes:
+      label: App language
+      placeholder: French / English / Spanish...
+    validations:
+      required: false
