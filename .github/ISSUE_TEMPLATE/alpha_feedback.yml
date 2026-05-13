@@ -1,12 +1,13 @@
 name: Alpha feedback
 description: Share general feedback after testing DECY
-title: "[Feedback] "
-labels: [feedback, needs-review]
+title: "Feedback: "
+labels: ["feedback", "needs-review"]
 body:
   - type: markdown
     attributes:
       value: |
-        Share what felt useful, confusing, missing, or unnecessary. Please avoid personal details.
+        Share what felt useful, confusing, missing, or unnecessary. Please avoid private details. Short, concrete feedback is very useful.
+
   - type: textarea
     id: context
     attributes:
@@ -14,6 +15,7 @@ body:
       placeholder: I was trying to decide whether to...
     validations:
       required: true
+
   - type: textarea
     id: useful
     attributes:
@@ -21,13 +23,15 @@ body:
       placeholder: The app helped me because...
     validations:
       required: false
+
   - type: textarea
     id: confusing
     attributes:
-      label: What felt confusing or too heavy?
+      label: What felt confusing, too heavy, or unclear?
       placeholder: I did not understand...
     validations:
       required: false
+
   - type: textarea
     id: missing
     attributes:
@@ -35,6 +39,7 @@ body:
       placeholder: I expected to be able to...
     validations:
       required: false
+
   - type: dropdown
     id: value
     attributes:
@@ -46,10 +51,19 @@ body:
         - Probably not
     validations:
       required: true
+
   - type: input
     id: language
     attributes:
       label: App language used
-      placeholder: French / English / Spanish...
+      placeholder: French / English / Spanish / other
+    validations:
+      required: false
+
+  - type: textarea
+    id: final-note
+    attributes:
+      label: Anything else?
+      description: Optional. Please avoid personal or sensitive details.
     validations:
       required: false
