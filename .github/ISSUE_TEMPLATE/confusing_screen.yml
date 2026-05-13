@@ -1,15 +1,21 @@
 name: Confusing screen or wording
 description: Tell us where the app was unclear
-title: "[Confusing] "
-labels: [confusing, needs-review]
+title: "Confusing: "
+labels: ["confusing", "needs-review"]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this when the app technically works, but the wording, screen, or decision flow is hard to understand.
+
   - type: input
     id: screen
     attributes:
       label: Which screen or feature?
-      placeholder: Home, contract detail, reminders, voice review...
+      placeholder: Home, onboarding, item creation, contract detail, reminders, voice review...
     validations:
       required: true
+
   - type: textarea
     id: unclear
     attributes:
@@ -17,6 +23,7 @@ body:
       placeholder: I did not understand what this meant...
     validations:
       required: true
+
   - type: textarea
     id: expectation
     attributes:
@@ -24,6 +31,7 @@ body:
       placeholder: A better wording could be...
     validations:
       required: false
+
   - type: dropdown
     id: impact
     attributes:
@@ -34,10 +42,19 @@ body:
         - No, just wording
     validations:
       required: true
+
   - type: input
     id: language
     attributes:
       label: App language
-      placeholder: French / English / Spanish...
+      placeholder: French / English / Spanish / other
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot or extra context
+      description: Optional. Remove or hide private information before posting.
     validations:
       required: false
