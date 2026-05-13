@@ -1,0 +1,7 @@
+# Android build artifacts should be attached to GitHub Releases, not committed to the repository.
+*.apk
+*.aab
+
+# Local notes / OS files
+.DS_Store
+Thumbs.db
