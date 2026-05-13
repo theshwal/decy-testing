@@ -1,12 +1,13 @@
 name: Alpha access request
 description: Ask to join the DECY alpha test
-title: "[Alpha access] "
-labels: [alpha-access, needs-review]
+title: "Alpha access: "
+labels: ["alpha-access", "needs-review"]
 body:
   - type: markdown
     attributes:
       value: |
-        Requesting access does not guarantee immediate access. Please do not share sensitive information.
+        Requesting access does not guarantee immediate access. This repository is public: only share what you are comfortable making public. Do not post alpha keys, private documents, addresses, invoices, contract numbers, or secrets.
+
   - type: input
     id: name
     attributes:
@@ -14,14 +15,16 @@ body:
       placeholder: Your name or nickname
     validations:
       required: true
+
   - type: input
     id: contact
     attributes:
       label: Contact method
-      description: Email, Reddit username, or GitHub username. Only share what you are comfortable sharing publicly.
+      description: GitHub username, Reddit username, or email. Only share what you are comfortable sharing publicly.
       placeholder: GitHub username / Reddit username / email
     validations:
       required: false
+
   - type: dropdown
     id: language
     attributes:
@@ -33,6 +36,15 @@ body:
         - Other
     validations:
       required: true
+
+  - type: input
+    id: device
+    attributes:
+      label: Test device
+      placeholder: Android phone, iPhone, tablet, emulator...
+    validations:
+      required: false
+
   - type: input
     id: country
     attributes:
@@ -40,6 +52,7 @@ body:
       placeholder: France, UK, Spain...
     validations:
       required: false
+
   - type: textarea
     id: motivation
     attributes:
@@ -47,6 +60,7 @@ body:
       placeholder: I want to test it because...
     validations:
       required: true
+
   - type: checkboxes
     id: consent
     attributes:
@@ -54,5 +68,5 @@ body:
       options:
         - label: I understand this is an early alpha and may be incomplete or unstable.
           required: true
-        - label: I agree not to post private documents, secrets, or sensitive personal information in public issues.
+        - label: I agree not to post private documents, secrets, alpha keys, or sensitive personal information in public issues.
           required: true
