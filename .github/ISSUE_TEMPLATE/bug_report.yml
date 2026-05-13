@@ -1,67 +1,74 @@
 name: Bug report
-description: Report something that does not work as expected
-title: "[Bug] "
-labels: [bug, needs-review]
+description: Report something that does not work in the DECY alpha
+title: "Bug: "
+labels: ["bug", "needs-review"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for reporting a bug. Please avoid sharing private information or sensitive documents.
+        Thanks for reporting a bug. Please do not include private personal information, access keys, contracts, invoices, addresses, phone numbers, or screenshots containing secrets.
+
   - type: textarea
     id: what-happened
     attributes:
       label: What happened?
-      description: Describe the bug in a few sentences.
-      placeholder: I tapped..., then...
+      description: Describe the issue clearly.
+      placeholder: I tried to... but the app...
     validations:
       required: true
+
   - type: textarea
     id: expected
     attributes:
       label: What did you expect?
-      placeholder: I expected...
+      placeholder: I expected the app to...
     validations:
       required: true
+
   - type: textarea
     id: steps
     attributes:
       label: Steps to reproduce
-      description: List the steps if you can.
+      description: List the actions that led to the issue, if you can.
       placeholder: |
         1. Open...
         2. Tap...
-        3. See...
+        3. Choose...
+        4. See...
     validations:
       required: false
+
   - type: dropdown
     id: severity
     attributes:
-      label: Impact
+      label: How severe is it?
       options:
         - Blocking — I cannot continue
-        - High — important feature unusable
-        - Medium — confusing or inconvenient
-        - Low — small issue
+        - Important — I can continue but it is confusing or broken
+        - Minor — small issue or visual problem
     validations:
       required: true
+
   - type: input
     id: device
     attributes:
       label: Device and OS
-      placeholder: Android 14 / iPhone 15 / emulator...
+      placeholder: Android 14 / iPhone 15 / tablet / emulator...
     validations:
       required: false
+
   - type: input
-    id: language
+    id: app-language
     attributes:
       label: App language
-      placeholder: French / English / Spanish...
+      placeholder: French / English / Spanish / other
     validations:
       required: false
+
   - type: textarea
     id: screenshots
     attributes:
-      label: Screenshot or screen recording
-      description: Optional. Blur or remove personal information first.
+      label: Screenshots or notes
+      description: Optional. Remove or hide private information before posting.
     validations:
       required: false
