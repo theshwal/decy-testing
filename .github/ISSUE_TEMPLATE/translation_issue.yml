@@ -1,0 +1,54 @@
+name: Language or translation issue
+description: Report unclear wording or translation problems
+title: "Translation: "
+labels: ["translation", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for translation mistakes, awkward wording, mixed languages, or terms that do not feel natural.
+
+  - type: dropdown
+    id: language
+    attributes:
+      label: Language concerned
+      options:
+        - French
+        - English
+        - Spanish
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: screen
+    attributes:
+      label: Screen or feature
+      placeholder: Home, onboarding, settings, contract detail...
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-wording
+    attributes:
+      label: Current wording
+      description: Copy the exact wording if possible.
+      placeholder: The app says...
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue
+    attributes:
+      label: What is wrong or unclear?
+      placeholder: This sounds strange because...
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested wording
+      placeholder: A clearer wording could be...
+    validations:
+      required: false
